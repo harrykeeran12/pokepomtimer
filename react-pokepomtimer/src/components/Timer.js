@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-class Timer extends React.Component{
-  render(){
+function Timer(){
+  const [start, setstart] = useState(false)
+  const startTimer = () =>{
+    setstart(!start)
+  }
     return(
       <div className="timer-wrapper">
         <section className="timer">
@@ -10,11 +13,11 @@ class Timer extends React.Component{
           <p className="secs">00</p>
         </section>
         <div className="icon-circle">
-          <i className="fa fa-hourglass-start start" aria-hidden="true"></i>
+          <i className={`icon ${start ? 'fa fa-hourglass-start start' : 'fa fa-hourglass-end start' }`} aria-hidden="true" onClick={() => startTimer()}></i>
         </div>
       </div>
     )
   }
-}
+
 
 export default Timer
