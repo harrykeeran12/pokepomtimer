@@ -23,7 +23,11 @@
   <body>
     <main>
       <div class="timer-wrapper">
-        <section class="timer">10:00</section>
+        <section class="timer">
+          <p class="mins">10</p>
+          <p>:</p>
+          <p class="secs">00</p>
+        </section>
         <div class="icon-circle">
           <i class="fa fa-hourglass-start start" aria-hidden="true"></i>
         </div>
@@ -31,11 +35,11 @@
       <h2 class="tasks-title">tasks:</h2>
       <ul class="tasks-list">
         <li class="task-wrapper">
-          <span class="dot"></span>
+          <span class="dot" onclick="crossOut(this)"></span>
           <p class="task">Do this.</p>
         </li>
         <li class="task-wrapper">
-          <span class="dot"></span>
+          <span class="dot" onclick="crossOut(this)"></span>
           <p class="task">
             Do that. Do that. Lorem ipsum dolor sit, amet consectetur
             adipisicing elit. Voluptate nihil voluptatem pariatur fuga laborum
@@ -43,11 +47,23 @@
           </p>
         </li>
         <li class="task-wrapper">
-          <span class="dot"></span>
+          <span class="dot" onclick="crossOut(this)"></span>
           <p class="task">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
             quidem tempore ab?.
           </p>
+        </li>
+        <li class="task-wrapper form">
+          <form class="task-input" id="task-input">
+            <label for="add-task">Add a task! : </label><br />
+            <input type="text" id="add-task" name="add-task" /><br />
+            <input
+              class="submit"
+              type="submit"
+              value="Add Task"
+              onclick="addTask()"
+            />
+          </form>
         </li>
       </ul>
     </main>

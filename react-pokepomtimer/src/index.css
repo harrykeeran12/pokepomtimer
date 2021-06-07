@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: rgba(227, 53, 13, 0.75);
+  --blue1: #6db3dd;
+  --blue2: #537c96;
+  --os: "Odibee Sans", cursive;
+  --rs: "Roboto Slab", serif;
+  font-size: 12px;
+}
+
+body {
+  background-color: var(--bg);
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+.dot {
+  height: 2.1rem;
+  width: 2.1rem;
+  background-color: var(--blue2);
+  border-radius: 50%;
+  margin-right: 25px;
+}
+.dot:hover {
+  background-color: var(--blue1);
+}
+
+.crossout {
+  text-decoration: line-through;
+}
+
+.timer-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.timer {
+  color: var(--blue1);
+  font-family: var(--os);
+  font-size: 16rem;
+  display: flex;
+  flex-direction: row;
+}
+.start {
+  color: var(--blue2);
+  font-size: 2.1rem;
+}
+.start:hover {
+  color: var(--blue1);
+}
+
+.tasks-title {
+  font-family: var(--rs);
+  color: var(--blue2);
+  width: 50%;
+  height: 20%;
+  letter-spacing: 1.5px;
+  pointer-events: all;
+}
+.tasks-list {
+  min-width: 25%;
+  max-width: 50%;
+  height: auto;
+  list-style: none;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--blue2);
+  font-family: var(--rs);
+  pointer-events: all;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tasks-list li:first-child {
+  margin-top: 5%;
+}
+.tasks-list li:last-child {
+  margin-bottom: 10%;
+}
+.task-wrapper {
+  margin-left: 5%;
+  color: var(--blue2);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 1.5%;
+  text-align: left;
+}
+.tasks-list li p {
+  overflow: scroll;
+}
+.task-wrapper p {
+  width: 70%;
+}
+.task-input {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 5px;
+}
+.task-input label {
+  width: 10%;
+}
+.task-input input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  background-color: var(--blue1);
+  opacity: 0.75;
+  border: none;
+}
+.task-input input[type="submit"] {
+  padding: 3px;
+}
