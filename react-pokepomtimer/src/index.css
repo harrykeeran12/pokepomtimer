@@ -44,6 +44,9 @@ main {
 .crossout {
   text-decoration: line-through;
 }
+.scroll-x {
+  overflow-x: scroll;
+}
 
 .timer-wrapper {
   display: flex;

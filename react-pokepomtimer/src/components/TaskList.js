@@ -4,8 +4,14 @@ import Form from './Form.js'
 import '../index.css';
 
 function TaskList() {
-  const [taskgroup, settaskgroup] = useState(["The art of war", "Is a fun thing.", "Innit."
-])
+  const [taskgroup, settaskgroup] = useState([])
+  function addtotasks(task){
+    const list = [...taskgroup];
+
+    list.push(task)
+
+    settaskgroup(list)
+  }
     return(
 
       <React.Fragment>
@@ -16,7 +22,7 @@ function TaskList() {
             <Task value={task} key={index}></Task>
           ))
         }
-        <Form settaskgroup = {task => {settaskgroup([...taskgroup, task])} }></Form>
+        <Form addtotasks = {task => /* {settaskgroup([...taskgroup, task])} */ addtotasks(task)}></Form>
       </ul>
       </React.Fragment>
     )

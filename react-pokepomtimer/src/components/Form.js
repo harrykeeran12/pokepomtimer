@@ -1,16 +1,23 @@
-import React , { useState } from 'react';
+import React, {useState} from 'react';
 import '../index.css'
 
-function Form({ settaskgroup }){
-const [task, settask] = useState('testing')
+function Form({ addtotasks }){
+const [task, settask] = useState(' ')
 
 /* function rewrite(){
   settaskgroup(task)
 } */
 const handleInput = event => {
-  event.preventDefault()
-  settask(event.target.value);  
+  if (event.target.value !== ''){
+  console.log(event.target.value)
+  settask(event.target.value)
+  
+ }
   };
+const submitHandler = event => {
+  event.preventDefault()
+  addtotasks(task); 
+}
 
 
   return(
@@ -22,7 +29,7 @@ const handleInput = event => {
         className="submit"
         type="submit"
         value="Add Task"
-        onClick={() => settaskgroup(task)}
+        onClick={submitHandler}
       />
      </form>
      </li>
