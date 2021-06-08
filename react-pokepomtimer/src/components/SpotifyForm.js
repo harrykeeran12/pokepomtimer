@@ -19,7 +19,7 @@ const submitHandler = event => {
 }
   return(
     <form className="spotify-form">
-      <input type="text" placeholder="Enter the URL of a Spotify Link here." onChange={handleInput}className = "spotify-form-text"></input>
+      <textarea type="text" placeholder="Enter the URL of a Spotify Link here." value={Temp} onChange={(e) => handleInput(e)} className = "spotify-form-text" cols="50" rows="3" ></textarea>
       <input type="submit" value="Submit" onClick={submitHandler}></input>
     </form>
   )

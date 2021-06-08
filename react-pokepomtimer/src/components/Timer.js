@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
+import ReactTooltip from 'react-tooltip'
 
 function Timer(){
   
@@ -57,7 +58,11 @@ function Timer(){
           <p className="secs">{timerSecs}</p>
           
         </section>
-        <div className="icon-circle"><i className={`icon ${start ? 'fa fa-hourglass-start start' : 'fa fa-hourglass-end start' }`} aria-hidden="true" onClick={() => boolTimer()}></i></div>
+        <div className="icon-circle"><i className={`icon ${start ? 'fa fa-hourglass-start start' : 'fa fa-hourglass-end start' }`} aria-hidden="true" onClick={() => boolTimer()} data-tip data-for="hourglass"></i>
+        <ReactTooltip id="hourglass" type="info">
+          <p>H!</p>
+          </ReactTooltip>
+          </div>
         
         
       </div>

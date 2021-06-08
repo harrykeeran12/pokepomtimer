@@ -15,9 +15,9 @@ const handleInput = event => {
   };
 const submitHandler = event => {
   event.preventDefault()
-  if(task !== ' '){
+  if(task !== ''){
    addtotasks(task);
-   settask(' ')
+   settask('')
   } 
 }
 
@@ -25,8 +25,8 @@ const submitHandler = event => {
   return(
     <li className="task-wrapper form" >
     <form className="task-input" id="task-input" >
-      <label for="add-task">Add a task! : </label><br />
-      <input type="text" id="add-task" name="add-task" onChange={handleInput} /><br />
+      <label for="add-task">add a task! : </label><br />
+      <input type="text" id="add-task" name="add-task" value={task} onChange={(e) => handleInput(e)} /><br />
       <input
         className="submit"
         type="submit"
