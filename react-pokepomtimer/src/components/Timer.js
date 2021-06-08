@@ -48,15 +48,18 @@ function Timer(){
 
       return(
       <div className="timer-wrapper">
+        <div><i class="fa fa-circle-o" aria-hidden="true"></i>
+</div>
         <section className="timer">
         
           <p className="mins">{timerMins}</p>
           <p>:</p>
           <p className="secs">{timerSecs}</p>
+          
         </section>
-        <div className="icon-circle">
-          <i className={`icon ${start ? 'fa fa-hourglass-start start' : 'fa fa-hourglass-end start' }`} aria-hidden="true" onClick={() => boolTimer()}></i>
-        </div>
+        <div className="icon-circle"><i className={`icon ${start ? 'fa fa-hourglass-start start' : 'fa fa-hourglass-end start' }`} aria-hidden="true" onClick={() => boolTimer()}></i></div>
+        
+        
       </div>
     )
   }

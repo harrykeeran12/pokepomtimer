@@ -15,7 +15,10 @@ const handleInput = event => {
   };
 const submitHandler = event => {
   event.preventDefault()
-  addtotasks(task); 
+  if(task !== ' '){
+   addtotasks(task);
+   settask(' ')
+  } 
 }
 
 

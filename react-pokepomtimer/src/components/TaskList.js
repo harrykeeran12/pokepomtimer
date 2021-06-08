@@ -15,8 +15,9 @@ function TaskList() {
     return(
 
       <React.Fragment>
-      <h2 className="tasks-title">tasks:</h2>
+      
       <ul className="tasks-list">
+        <h2 className="tasks-title">tasks:</h2>
         {
           taskgroup.map((task, index) => (
             <Task value={task} key={index}></Task>
