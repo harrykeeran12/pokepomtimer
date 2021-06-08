@@ -80,19 +80,19 @@ main {
   pointer-events: all;
 }
 .tasks-list {
-  min-width: 25%;
-  max-width: 50%;
-  height: auto;
+  min-width: 50%;
+  max-width: 70%;
+  height: 200px;
   list-style: none;
   border-width: 5px;
   border-style: solid;
   border-color: var(--blue2);
   font-family: var(--rs);
   pointer-events: all;
-  margin-bottom: 10%;
+  margin-bottom: 15%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 .tasks-list li:first-child {
   margin-top: 5%;
@@ -118,7 +118,7 @@ main {
 .task-input {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 100vw;
   gap: 5px;
 }
 .task-input label {

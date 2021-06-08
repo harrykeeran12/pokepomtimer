@@ -9,7 +9,6 @@ const [task, settask] = useState(' ')
 } */
 const handleInput = event => {
   if (event.target.value !== ''){
-  console.log(event.target.value)
   settask(event.target.value)
   
  }
