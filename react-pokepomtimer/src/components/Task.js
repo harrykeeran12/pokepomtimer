@@ -1,19 +1,20 @@
-import React, {useState}from 'react';
-import '../index.css'
- 
-function Task(props){
+import React, { useState } from "react";
+import "../index.css";
+
+function Task(props) {
   const [done, setdone] = useState(false);
 
   const completeTask = () => {
     setdone(!done);
-    console.log(done)
-  }
-  return(
+    console.log(done);
+  };
+  return (
     <li className="task-wrapper">
       <span className="dot" onClick={() => completeTask()}></span>
-      <p className={`task ${done ? 'crossout' : ''}`}>{props.value}</p>
-    </li> );
-  };
+      <p className={`task ${done ? "crossout" : ""}`}>{props.value}</p>
+    </li>
+  );
+}
 
 /* class Task extends React.Component{
   

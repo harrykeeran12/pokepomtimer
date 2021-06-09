@@ -53,7 +53,7 @@ main {
 
 .timer-wrapper {
   display: flex;
-  width: 100%;
+  width: 50vw;
   height: 100%;
   justify-content: center;
   align-items: center;
@@ -63,6 +63,7 @@ main {
   color: var(--blue1);
   font-family: var(--os);
   font-size: 16rem;
+  width: auto;
   display: flex;
   flex-direction: row;
   margin-top: 5%;
@@ -70,12 +71,19 @@ main {
 .icon {
   color: var(--blue2);
   font-size: 2.1rem;
-  cursor: pointer;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
+}
+.icon-grouping {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
 }
 .icon:hover {
   color: var(--blue1);
+  cursor: pointer;
 }
 
 .tasks-title {
@@ -150,6 +158,7 @@ main {
   color: var(--blue2);
   font-weight: bold;
   font-family: inherit;
+  border-radius: 10px;
 }
 
 .task-input input[type="submit"]:hover {
@@ -210,6 +219,11 @@ main {
   font-size: 1rem;
   font-family: var(--rs);
   resize: none;
+  padding: 2px;
+  text-align: left;
+}
+#tooltip {
+  background-color: var(--blue2);
 }
 @media screen and (max-width: 500px) {
   :root {

@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
-import Task from './Task.js';
-import Form from './Form.js'
-import '../index.css';
+import React, { useState } from "react";
+import Task from "./Task.js";
+import Form from "./Form.js";
+import "../index.css";
 
 function TaskList() {
-  const [taskgroup, settaskgroup] = useState([])
-  function addtotasks(task){
+  const [taskgroup, settaskgroup] = useState([]);
+  function addtotasks(task) {
     const list = [...taskgroup];
 
-    list.push(task)
+    list.push(task);
 
-    settaskgroup(list)
+    settaskgroup(list);
   }
-    return(
-
-      <React.Fragment>
-      
+  return (
+    <React.Fragment>
       <ul className="tasks-list">
         <h2 className="tasks-title">tasks:</h2>
-        {
-          taskgroup.map((task, index) => (
-            <Task value={task} key={index}></Task>
-          ))
-        }
-        <Form addtotasks = {task => /* {settaskgroup([...taskgroup, task])} */ addtotasks(task)}></Form>
+        {taskgroup.map((task, index) => (
+          <Task value={task} key={index}></Task>
+        ))}
+        <Form
+          addtotasks={(task) =>
+            /* {settaskgroup([...taskgroup, task])} */ addtotasks(task)
+          }
+        ></Form>
       </ul>
-      </React.Fragment>
-    )
+    </React.Fragment>
+  );
 }
 
-export default TaskList
+export default TaskList;
