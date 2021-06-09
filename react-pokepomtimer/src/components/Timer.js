@@ -13,7 +13,8 @@ function Timer() {
 
   const timerMins = minutes < 10 ? `0${minutes}` : minutes;
   const timerSecs = seconds < 10 ? `0${seconds}` : seconds;
-  let skipMessage = "";
+
+
   useEffect(() => {
     let interval = setInterval(() => {
       clearInterval(interval);
@@ -23,11 +24,13 @@ function Timer() {
             setseconds(59);
             setminutes(minutes - 1);
           } else {
-            /* if (skip === false) {
+            if (skip === false) {
+              setstart(false);
               setminutes(5);
             } else {
+              setstart(false);
               setminutes(10);
-            } */
+            }
           }
         } else {
           setseconds(seconds - 1);
@@ -43,13 +46,13 @@ function Timer() {
       setstart(!start);
     }
   };
+
+  
   const skipBreak = () => {
     if (skip === true) {
-      let skipMessage = "Break has been skipped";
-      console.log(skipMessage);
+
       setskip(!skip);
     } else {
-      console.log(skipMessage);
       setskip(!skip);
     }
   };
