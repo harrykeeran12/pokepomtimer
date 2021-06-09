@@ -75,11 +75,15 @@ main {
   height: 20px;
 }
 .icon-grouping {
+  width: 10%;
+  height: 10%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: 1.2rem;
+  grid-row-gap: 1.2rem;
+  justify-items: center;
+  align-items: center;
 }
 .icon:hover {
   color: var(--blue1);
@@ -108,7 +112,7 @@ main {
   border-color: var(--blue2);
   font-family: var(--rs);
   pointer-events: all;
-  margin-bottom: 15%;
+  margin-bottom: 10%;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -222,8 +226,16 @@ main {
   padding: 2px;
   text-align: left;
 }
-#tooltip {
+
+.tooltip {
   background-color: var(--blue2);
+  padding: 2px;
+  color: white;
+  font-family: var(--rs);
+}
+.tooltip[data-theme~='blue'] {
+  background-color: var(--blue1);
+  color: white;
 }
 @media screen and (max-width: 500px) {
   :root {
