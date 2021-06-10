@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../index.css";
 
-function Task(props) {
+function Task({value, deletefromtasks}) {
   const [done, setdone] = useState(false);
 
   const completeTask = () => {
@@ -11,7 +11,8 @@ function Task(props) {
   return (
     <li className="task-wrapper">
       <span className="dot" onClick={() => completeTask()}></span>
-      <p className={`task ${done ? "crossout" : ""}`}>{props.value}</p>
+      <p className={`task ${done ? "crossout" : ""}`}>{value}</p>
+      <i class="far fa-trash-alt icon delete" onClick={deletefromtasks}></i>
     </li>
   );
 }

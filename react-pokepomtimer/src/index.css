@@ -128,7 +128,8 @@ main {
   margin-left: 5%;
   color: var(--blue2);
   display: flex;
-  align-items: center;
+  align-content: center;
+
   flex-direction: row;
   padding: 1.5%;
   text-align: left;
@@ -136,6 +137,10 @@ main {
 
 .task-wrapper p {
   width: 70%;
+}
+.task-wrapper i{
+  margin-left: 25px;
+  
 }
 .task-input {
   display: flex;
